@@ -44,9 +44,7 @@ An example of the shortcut to open recent files:
 
 ```lua
 -- Map a shortcut to open the picker.
-vim.api.nvim_set_keymap("n", "<Leader><Leader>",
-  [[<cmd>lua require('telescope').extensions.recent_files.pick()<CR>]],
-  {noremap = true, silent = true})
+vim.keymap.set("n", "<Leader><Leader>", require('telescope').extensions.recent_files.pick, { silent = true })
 ```
 
 ## Options
